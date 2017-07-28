@@ -1,0 +1,9 @@
+<h5>Put the question and options here </h5>
+<form (submit)="addQuestion()">
+<label>Question</label><input type="text" name="question" [(ngModel)]='user.question'>
+<label>Option1</label><input type="text" name="option1" [(ngModel)]='user.option1'>
+<label>Option2</label><input type="text" name="option2" [(ngModel)]='user.option2'>
+<label>Option3</label><input type="text" name="option3" [(ngModel)]='user.option3'>
+<label>Option4</label><input type="text" name="option4" [(ngModel)]='user.option4'>
+<input type="submit" value="Create Poll"/>
+</form>

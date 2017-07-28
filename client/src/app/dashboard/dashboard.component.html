@@ -1,0 +1,14 @@
+<html>
+    <body>
+<a [routerLink]="['/create']">Create a  New Poll</a>|<a href="/logout">Log out </a>
+
+<table border="1">
+    <tr><th>Name</th><th>SurveyName</th><th>Date Posted</th><th>Action</th></tr>
+    <tr *ngFor="let user of users">
+        <td>{{user.name}}</td>
+        <td><a href="/poll/:id">{{user.question}}</a></td>
+        <td>{{user.createdAt| date : short }}</td>
+        <td ><button *ngIf='userData.name==user.name'(click)="deleteQuestion()">Delete</button></td></tr>
+        </table>
+    </body>
+</html>
